@@ -1,126 +1,35 @@
 <!DOCTYPE html>
-<html lang="rus">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SoundBurner - площадка для музыкатов</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Змейка</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Шапка сайта -->
-  <header>
-    <div class="all-header">
-      <div class="lang">
-        <a href="#">en</a>
-        <a href="#" class="active">ru</a>
-      </div>
-      <div class="header-main">
-        <img src="img/logo.png" alt="Logo">
-        <input type="search" name="search" id="search" placeholder="начните поиск трека, исполнителя ...">
-        <a href="#">Загрузить песню</a>
-          <div class="btn auth">Войти</div>
-        <div class="btn reg">Регистрация</div>
-      </div>
+    <div class="game-container">
+        <h1>Змейка</h1>
+        <div class="score-container">
+            <div class="score">Счет: <span id="score">0</span></div>
+            <div class="high-score">Рекорд: <span id="high-score">0</span></div>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <div class="control-instructions">
+                <p>Используйте стрелки для управления</p>
+                <p>Пробел - пауза/возобновить</p>
+                <p>Enter - новая игра</p>
+            </div>
+            <button id="startBtn">Начать игру</button>
+            <button id="pauseBtn">Пауза</button>
+            <button id="restartBtn">Новая игра</button>
+        </div>
+        <div id="gameOver" class="game-over hidden">
+            <h2>Игра окончена!</h2>
+            <p>Ваш счет: <span id="finalScore">0</span></p>
+            <button id="playAgainBtn">Играть снова</button>
+        </div>
     </div>
-  </header>
-
-  <!-- Основная часть сайта -->
-  <main>
-    <div class="section">
-      <h3><span></span>Chill</h3>
-      <div class="flex-container">
-        <div class="img_block">
-          <img src="img/photo.png" alt="foto-1">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-        </div>
-        <div class="img_block">
-          <img src="img/photo.png" alt="foto-1">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-        </div>
-        <div class="img_block">
-          <img src="img/photo.png" alt="foto-1">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-          <div class="button-play"><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h3><span></span>Chill</h3>
-      <div class="flex-container">
-        <div class="img_block">
-          <img src="img/photo2.png" alt="foto-2">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-        </div>
-        <div class="img_block">
-          <img src="img/photo2.png" alt="foto-2">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-        </div>
-        <div class="img_block">
-          <img src="img/photo2.png" alt="foto-2">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-          <div class="button-play"><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h3><span></span>Chill</h3>
-      <div class="flex-container">
-        <div class="img_block">
-          <img src="img/photo3.png" alt="foto-3">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-        </div>
-        <div class="img_block">
-          <img src="img/photo3.png" alt="foto-3">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-        </div>
-        <div class="img_block">
-          <img src="img/photo3.png" alt="foto-3">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-          <div class="button-play"><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h3><span></span>Chill</h3>
-      <div class="flex-container">
-        <div class="img_block">
-          <img src="img/photo4.png" alt="foto-4">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-        </div>
-        <div class="img_block">
-          <img src="img/photo4.png" alt="foto-4">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-        </div>
-        <div class="img_block">
-          <img src="img/photo4.png" alt="foto-4">
-          <h4>Never Chill Before</h4>
-          <p>Pineapple Express</p>
-          <div class="button-play"><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- футер сайта -->
-<footer>
-  <p>Политика конфиденциальности</p>
-</footer>
-  <script src="https://kit.fontawesome.com/c0d704322e.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
